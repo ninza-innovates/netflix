@@ -2,7 +2,7 @@ The stack that is being used: React (custom hooks, context, portals), Firebase (
 
 Hey! I finally finished this Netflix clone (took me more time than I expected 😅). My idea was to make everything static (movies, series, tv shows, ...) but then I found this really cool TMDB API which you can pull most popular movies, top rated shows, what's trending, collections, lists and muuuch more. Really worth checking the effort made.
 
-First use the <b>Firebase App</b> api key of your's as the project's api keys has been removed and you can add them in /lib/firebase.prod.js file and <b>tmdb</b> api key also needs to be changed, which is present in request.js file under the project directory.
+Sign-in and the movie rows need your own Firebase project and a TMDB API key. See [Environment variables](#environment-variables).
 
 <img src="/images/demo1.png">
 
@@ -16,6 +16,12 @@ With Youtube Trailers Embeded
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Environment variables
+
+Copy [`.env.example`](.env.example) to `.env` in the project root and replace the placeholders with your own Firebase web config and TMDB API key. Create React App only exposes variables that start with `REACT_APP_`. Do not commit `.env`.
+
+`src/lib/firebase.prod.js` reads the Firebase values, and `src/request.js` reads `REACT_APP_TMDB_API_KEY`.
 
 ## Available Scripts
 
