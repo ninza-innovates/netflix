@@ -23,6 +23,28 @@ Copy [`.env.example`](.env.example) to `.env` in the project root and replace th
 
 `src/lib/firebase.prod.js` reads the Firebase values, and `src/request.js` reads `REACT_APP_TMDB_API_KEY`.
 
+| Variable | Maps to |
+| --- | --- |
+| `REACT_APP_FIREBASE_API_KEY` | Firebase `apiKey` |
+| `REACT_APP_FIREBASE_AUTH_DOMAIN` | Firebase `authDomain` |
+| `REACT_APP_FIREBASE_PROJECT_ID` | Firebase `projectId` |
+| `REACT_APP_FIREBASE_STORAGE_BUCKET` | Firebase `storageBucket` |
+| `REACT_APP_FIREBASE_MESSAGING_SENDER_ID` | Firebase `messagingSenderId` |
+| `REACT_APP_FIREBASE_APP_ID` | Firebase `appId` |
+| `REACT_APP_TMDB_API_KEY` | `api_key` on each TMDB request in `src/request.js` |
+
+## Install
+
+`package.json` `scripts` are `start`, `build`, `test`, and `eject` (`react-scripts` for each). There is no install script. From the project root:
+
+```bash
+npm install
+npm start
+npm run build
+```
+
+`npm install` installs the dependencies those scripts need. `npm start` runs the app, and `npm run build` creates the production build. Both are described under [Available Scripts](#available-scripts).
+
 ## Available Scripts
 
 In the project directory, you can run:
