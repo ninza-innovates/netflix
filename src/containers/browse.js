@@ -3,17 +3,15 @@ import  React, { useContext, useState, useEffect } from 'react';
 import Fuse from 'fuse.js';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profiles';
-import { Card, Header, Loading } from '../components';
+import { Header, Loading } from '../components';
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
-import { FooterContainer } from './footer';
-import Player from '../components/player';
 
 
 
 export function BrowseContainer({ slides }) {
 
-    const [category, setCategory] = useState('series');
+    const [category] = useState('series');
     const [searchTerm, setSearchTerm] = useState('');
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
@@ -45,6 +43,8 @@ export function BrowseContainer({ slides }) {
             setSlideRows(slides[category]);
         }
 
+    // slideRows is updated here, so it cannot be a dependency without looping.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchTerm]);
 
     return profile.displayName ? (
