@@ -4,13 +4,13 @@ Hey! I finally finished this Netflix clone (took me more time than I expected ðŸ
 
 Sign-in and the movie rows need your own Firebase project and a TMDB API key. See [Environment variables](#environment-variables).
 
-<img src="/images/demo1.png">
+<img src="images/demo1.png" alt="Browse page with a Bridgerton banner and TMDB movie rows">
 
-<img src="/images/demo2.png">
+<img src="images/demo2.png" alt="Marketing home page with the email signup form and FAQ">
 
-With Youtube Trailers Embeded
+With YouTube trailers embedded
 
-<img src="/images/demo3.png">
+<img src="images/demo3.png" alt="Browse page with a YouTube trailer open under the poster row">
 
 
 # Getting Started with Create React App
@@ -35,7 +35,7 @@ Copy [`.env.example`](.env.example) to `.env` in the project root and replace th
 
 ## Install
 
-`package.json` `scripts` are `start`, `build`, `test`, and `eject` (`react-scripts` for each). There is no install script. From the project root:
+Use Node.js 16.20.2. `react-scripts` 4 does not compile on Node 18 or newer, and [CI](.github/workflows/ci.yml) pins that version. `package.json` `scripts` are `start`, `build`, `test`, and `eject` (`react-scripts` for each). There is no install script. From the project root:
 
 ```bash
 npm install
@@ -111,6 +111,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the Node version, the Firebase and TMDB variables in [`.env.example`](.env.example), and the test and build commands CI runs.
 
 ## License
 
